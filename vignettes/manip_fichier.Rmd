@@ -1,0 +1,25 @@
+---
+title: "manip_fichier"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{manip_fichier}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup}
+library(toolboxfileaxel)
+```
+
+```{r}
+# path <- system.file("squirrels_hex.png",package = "toolboxfileaxel")
+# 
+# nom <- basename(path)
+# taille <- file.size(path)
+# 
+# df <- data.frame(nom = nom,taille = taille)
+
+get_one_file_size(system.file("squirrels_hex.png",package = "toolboxfileaxel"))
+
+```
+

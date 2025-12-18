@@ -3,8 +3,16 @@ Title: Groupement de fonctions utilitaires
 Version: 0.0.1
 Authors@R: 
     person("Axel", "CLAIN", , "axel.clain@atih.sante.fr", role = c("aut", "cre"))
-Description: Groupement de fonctions
+Description: Groupement de fonctions pour aider a lire des fichiers et a
+    recuperer leurs attributs.
 License: MIT + file LICENSE
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
+Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3

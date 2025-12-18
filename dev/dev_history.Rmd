@@ -6,6 +6,9 @@ date: "2025-12-18"
 
 # Ignore the dev/ folder and its contents for package creation
 ```{r}
+dir.create(here::here("dev"))
+dir.create(here::here("inst"))
+
 usethis::use_build_ignore("dev/")
 ```
 
@@ -51,6 +54,7 @@ usethis::use_news_md()
 usethis::use_version(which = "patch")
 ```
 
+## Code coverage
 ```{r}
 covr::report()
 ```
@@ -58,19 +62,19 @@ covr::report()
 ## Vignettes
 
 ```{r}
-usethis::use_vignette("")
+usethis::use_vignette("manip_fichier")
 ```
 
 ## Fichiers R
 
 ```{r}
-usethis::use_r("")
+usethis::use_r("get_all_file_size")
 ```
 
 ## Tests
 
 ```{r}
-usethis::use_test("")
+usethis::use_test("get_all_file_size")
 ```
 
 
