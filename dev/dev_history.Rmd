@@ -1,0 +1,76 @@
+---
+title: "dev_history"
+output: html_document
+date: "2025-12-18"
+---
+
+# Ignore the dev/ folder and its contents for package creation
+```{r}
+usethis::use_build_ignore("dev/")
+```
+
+# Define License with 
+```{r}
+usethis::use_mit_license("Axel CLAIN")
+```
+# Install a first time
+```{r}
+remotes::install_local(path = here::here(), force=TRUE) 
+```
+
+## Ajouter les dépendances au fichier description
+
+```{r}
+attachment::att_amend_desc(path = here::here())
+```
+
+## Génerer le site
+```{r}
+pkgdown::build_site(pkg = here::here(), override = list(destination = "inst/site"))
+```
+
+## Génerer le readme
+```{r}
+usethis::use_readme_rmd()
+```
+
+## Génerer le code de conduite
+```{r}
+usethis::use_code_of_conduct("axel.clain@atih.sante.fr")
+```
+
+## Ajouter un fichier news
+
+```{r}
+usethis::use_news_md()
+```
+
+## Incrémenter la version du package
+
+```{r}
+usethis::use_version(which = "patch")
+```
+
+```{r}
+covr::report()
+```
+
+## Vignettes
+
+```{r}
+usethis::use_vignette("")
+```
+
+## Fichiers R
+
+```{r}
+usethis::use_r("")
+```
+
+## Tests
+
+```{r}
+usethis::use_test("")
+```
+
+
